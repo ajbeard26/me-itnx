@@ -15,25 +15,16 @@ Open `http://localhost:3000`.
 
 ```bash
 npm run build
-npm start
 ```
 
-The app reads `PORT` and `HOSTNAME` from the environment. This project is configured for **port 3011** (nginx proxy target).
+Your hosting panel starts the app with `npm start` and assigns `PORT` automatically (e.g. 3011). Do not hardcode the port in the project.
 
-```bash
-npm run build
-pm2 start ecosystem.config.cjs
-# or after updates:
-pm2 restart me-itnx --update-env
-pm2 save
-```
+After each deploy:
 
-Check it is listening on the right port:
-
-```bash
-pm2 logs me-itnx --lines 20
-curl -I http://127.0.0.1:3011
-```
+1. `git pull origin main`
+2. `npm ci`
+3. `npm run build`
+4. Click **Restart** in your hosting panel
 
 ## Customize
 
@@ -47,4 +38,4 @@ curl -I http://127.0.0.1:3011
 1. Upload the project and run `npm install`.
 2. Run `npm run build`.
 3. Start with `npm start`, PM2, or your hosting control panel.
-4. Point `portfolio.nxrent.com` to the server and configure a reverse proxy to the assigned `PORT`.
+4. Point your domain to the server. Your panel/nginx handles the reverse proxy to the assigned port.
