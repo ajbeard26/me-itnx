@@ -18,6 +18,21 @@ npm run build
 npm start
 ```
 
+The app reads `PORT` and `HOSTNAME` from your environment. Your hosting panel can assign the port — do not hardcode it in the app.
+
+Example:
+
+```bash
+PORT=3847 HOSTNAME=0.0.0.0 npm start
+```
+
+With PM2 (also uses `PORT` from the environment):
+
+```bash
+PORT=3847 pm2 start ecosystem.config.cjs
+pm2 save
+```
+
 ## Customize
 
 - Edit the homepage content in `app/page.tsx`.
@@ -30,4 +45,4 @@ npm start
 1. Upload the project and run `npm install`.
 2. Run `npm run build`.
 3. Start with `npm start`, PM2, or your hosting control panel.
-4. Point `portfolio.nxrent.com` to the server and configure a reverse proxy to port 3000.
+4. Point `portfolio.nxrent.com` to the server and configure a reverse proxy to the assigned `PORT`.
