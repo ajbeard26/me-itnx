@@ -25,31 +25,6 @@ export default function ProjectPreview({ variant }: { variant: Project["preview"
           </div>
         </div>
       );
-    case "fleet":
-      return (
-        <div className="preview-ui preview-fleet">
-          <div className="preview-map" />
-          <div className="preview-list">
-            <span /><span /><span /><span />
-          </div>
-        </div>
-      );
-    case "printer":
-      return (
-        <div className="preview-ui preview-printer">
-          <div className="preview-toolbar" />
-          <div className="preview-rows">
-            <span /><span /><span /><span /><span />
-          </div>
-        </div>
-      );
-    case "kiosk":
-      return (
-        <div className="preview-ui preview-kiosk">
-          <div className="preview-feed" />
-          <div className="preview-status" />
-        </div>
-      );
     default:
       return (
         <div className="preview-ui preview-web">
