@@ -2,11 +2,13 @@ module.exports = {
   apps: [
     {
       name: "me-itnx",
-      script: "npm",
-      args: "start",
+      script: "scripts/start.mjs",
+      interpreter: "node",
       cwd: __dirname,
       env: {
-        NODE_ENV: "production"
+        NODE_ENV: "production",
+        PORT: "3011",
+        HOSTNAME: "0.0.0.0"
       }
     }
   ]

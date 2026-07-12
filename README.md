@@ -18,19 +18,21 @@ npm run build
 npm start
 ```
 
-The app reads `PORT` and `HOSTNAME` from your environment. Your hosting panel can assign the port — do not hardcode it in the app.
-
-Example:
+The app reads `PORT` and `HOSTNAME` from the environment. This project is configured for **port 3011** (nginx proxy target).
 
 ```bash
-PORT=3847 HOSTNAME=0.0.0.0 npm start
+npm run build
+pm2 start ecosystem.config.cjs
+# or after updates:
+pm2 restart me-itnx --update-env
+pm2 save
 ```
 
-With PM2 (also uses `PORT` from the environment):
+Check it is listening on the right port:
 
 ```bash
-PORT=3847 pm2 start ecosystem.config.cjs
-pm2 save
+pm2 logs me-itnx --lines 20
+curl -I http://127.0.0.1:3011
 ```
 
 ## Customize
