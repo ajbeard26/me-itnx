@@ -69,11 +69,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="section-cta reveal">
-          <a className="button outline" href="#contact">
-            View All Projects
-          </a>
-        </div>
       </section>
 
       <section id="services" className="section services-section">

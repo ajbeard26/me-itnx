@@ -2,7 +2,7 @@ export type Project = {
   title: string;
   category: string;
   description: string;
-  preview: "nxrent" | "itnx" | "fleet" | "printer" | "kiosk" | "web";
+  preview: "nxrent" | "itnx" | "web";
   logo?: string;
   logoBg?: string;
   href: string;
@@ -26,29 +26,6 @@ export const projects: Project[] = [
     logo: "/images/logos/itnx.png",
     logoBg: "#000000",
     href: "https://itnx.tech"
-  },
-  {
-    title: "Verizon Fleet Dashboard",
-    category: "Operations Tool",
-    description: "A custom dashboard that connects mobile-device, vehicle, and assignment data.",
-    preview: "fleet",
-    href: "#contact"
-  },
-  {
-    title: "Printer Management Tool",
-    category: "Network Automation",
-    description: "A local network utility for printer discovery, status monitoring, and support workflows.",
-    preview: "printer",
-    href: "#contact"
-  },
-  {
-    title: "DW Spectrum Kiosk",
-    category: "Windows Automation",
-    description: "Reliable auto-login, launch, fullscreen, and recovery automation for video monitoring stations.",
-    preview: "kiosk",
-    logo: "/images/logos/dw-spectrum.png",
-    logoBg: "#1a1a1a",
-    href: "#contact"
   },
   {
     title: "For The Love of Beauty",

@@ -385,9 +385,9 @@ button { font: inherit; cursor: pointer; }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
   gap: 20px;
-  min-width: max(100%, 1540px);
+  min-width: max(100%, 920px);
 }
 
 .project-card {
@@ -460,11 +460,6 @@ button { font: inherit; cursor: pointer; }
 }
 
 .project-copy a:hover { gap: 8px; }
-
-.section-cta {
-  text-align: center;
-  margin-top: 48px;
-}
 
 /* ── Project previews (mock UI) ─────────────────────── */
 
